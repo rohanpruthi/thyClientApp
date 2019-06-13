@@ -1,0 +1,35 @@
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_theme.scss';
+
+.spacer{
+  @include spacer(1,1);
+}
+.brand-logo {
+  @include svg-image-center('chair',128px,128px);
+}
+.custom-bg {
+    @include svg-background-image('barber');
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+}
+.container {
+    height: 100vh;
+}
+button.btn {
+  color: $color-primary;
+  background-color: $color-accent;
+  border-color: $color-accent;
+  outline: none;
+}
+button.btn:focus, button.btn:active {
+  outline: none;
+  box-shadow: none;
+}
+a {
+  color: $color-accent;
+  text-decoration: none;
+}
+a:visited, a:active {
+  text-decoration: none;
+}

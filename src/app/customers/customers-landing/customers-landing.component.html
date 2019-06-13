@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="spacer"></div>
+  <div class="row">
+    <div class="col">
+      <button type="button" name="addNewCustomer" id="addNewCustomer" (click)="openModal()" class="btn btn-outline-primary btn-lg btn-block">Add New Customer</button>
+    </div>
+  </div>
+  <p>Here is a list of your customers:</p>
+  <ul class="list-group">
+    <a href="#" class="list-group-item list-group-item-action" *ngFor="let customer of dummyCustomers">
+      <div class="row">
+        <div class="col-2">
+          <span [ngClass]="{
+            'avatar-female': customer.gender === 'Female',
+            'avatar-male': customer.gender === 'Male'
+          }"></span>
+        </div>
+        <div class="col-8">
+          <h5>{{customer.firstName}} {{customer.lastName}}</h5>
+        </div>
+        <div class="col-2">
+          <span class="d-flex justify-content-center align-self-center arrow-list"></span>
+        </div>
+      </div>
+    </a>
+  </ul>
+  <div *ngIf="!dummyCustomers || (dummyCustomers && dummyCustomers.length < 1)">
+    <h5>uh, oh! You have not added any customer(s) yet.</h5>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div>
+  <div class="spacer"></div>
+  <div>
+    <span class="brand-logo"></span>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h4>Please login to continue.</h4>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+    Login as:&nbsp;
+    <div class="form-check form-check-inline mt-1 mb-1">
+      <label class="form-check-label">
+        <input class="form-check-input" ngModel type="radio" name="userType" id="radioUser" value="user" checked required> Hairstylist
+      </label>
+    </div>
+    <div class="form-check form-check-inline mt-1 mb-1">
+      <label class="form-check-label">
+        <input class="form-check-input" ngModel type="radio" name="userType" id="radioCustomer" value="customer" disabled> Customer
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="emailAddress">Email Address (required):</label>
+      <input type="email" ngModel class="form-control" name="email" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter your email address" autofocus required>
+      <small id="emailHelp" class="form-text text-danger"></small>   
+    </div>
+    <div class="form-group">
+      <label for="password">Password (required):</label>
+      <input type="password" ngModel class="form-control" name="password" id="password" aria-describedby="passwordHelp" placeholder="Enter your password" required>
+      <small id="passwordHelp" class="form-text text-danger">meh!</small>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-lg btn-block">Login</button>
+    </div>
+      <div class="text-center">
+        <p>or choose to <a href="#">Sign Up?</a></p>
+    </div>
+  </form>
+</div>

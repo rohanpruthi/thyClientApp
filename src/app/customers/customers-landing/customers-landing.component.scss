@@ -1,0 +1,22 @@
+@import 'src/styles/_mixins.scss';
+
+.arrow-list {
+@include svg-image-flex('arrow-right-list',16px,16px);
+}
+.arrow-upward {
+  @include svg-image('arrow-upwards',64px,64px);
+}
+.avatar-female {
+  @include svg-image('female',32px,32px);
+  border-radius: 50%;
+}
+.avatar-male {
+  @include svg-image('male',32px,32px);
+  border-radius: 50%;
+}
+.spacer {
+  @include spacer(1,1)
+}
+.container {
+  height: 100vh;
+}
